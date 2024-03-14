@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  coorify:
+    image: screen-be:latest
+    restart: always
+    container_name: screen-bed
+    privileged: true
+    environment:
+      - CONFIGOR_OPENWRT_HOST='http://192.168.100.1'
+      - CONFIGOR_OPENWRT_USERNAME='root'
+      - CONFIGOR_OPENWRT_PASSWORD=''
+    volumes:
+      - /dev:/dev
